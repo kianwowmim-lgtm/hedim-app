@@ -22,8 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build web assets
-        run: npm run build --if-present
+      # ایجاد پوشه www و قرار دادن فایل اصلی وب در آن
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          cp index.html www/ || true
 
       - name: Add Capacitor Android
         run: npx cap add android || true
