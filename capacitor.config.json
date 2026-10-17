@@ -1,0 +1,6 @@
+{
+  "appId": "com.hedim.app",
+  "appName": "Hedim App",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
