@@ -22,17 +22,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # ایجاد پوشه www و قرار دادن فایل اصلی وب در آن
       - name: Prepare web assets
         run: |
           mkdir -p www
           cp index.html www/ || true
 
-      - name: Add Capacitor Android
-        run: npx cap add android || true
+      - name: Add Android Platform
+        run: npx cap add android
 
-      - name: Update Capacitor Android
-        run: npx cap sync
+      - name: Sync Capacitor
+        run: npx cap sync android
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
