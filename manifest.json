@@ -1,0 +1,14 @@
+{
+  "name": "هدیم",
+  "short_name": "هدیم",
+  "description": "مدیریت مالی شخصی به زبان فارسی",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080a09",
+  "theme_color": "#0b3d2e",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}
