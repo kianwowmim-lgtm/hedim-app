@@ -31,15 +31,19 @@ jobs:
           npx cap add android
           npx cap sync android
 
-      - name: Setup Java
+      
+
+       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
+          distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Android
+      - - name: Setup Android
         uses: android-actions/setup-android@v3
-
+        with:
+          packages: 'platforms;android-33 build-tools;33.0.2 platform-tools'
+          accept-license: true
       - name: Build APK
         working-directory: app/android
         run: ./gradlew assembleDebug
